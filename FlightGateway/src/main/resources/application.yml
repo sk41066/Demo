@@ -1,0 +1,26 @@
+zuul:
+  prefix: /api
+  routes:
+    user-service:
+      path: /flightService/**
+      serviceId: USERDETAILSERVICE
+    search-service:
+      path: /searchService/**
+      serviceId: SEARCHFLIGHTSERVICE
+      
+     
+eureka:
+  client: 
+    service-url: 
+        defaultZone: http://localhost:8099/eureka
+  instance: 
+      hostname: localhost
+       
+server:
+  port: 8080
+  
+spring:
+  application:
+     name: flightGateway
+    
+    
